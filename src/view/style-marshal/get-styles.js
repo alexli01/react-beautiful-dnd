@@ -61,8 +61,8 @@ export default (styleContext: string): Styles => {
     `,
     grabCursor: `
       ${dragHandleSelector} {
-        cursor: -webkit-grab;
-        cursor: grab;
+        cursor: -webkit-move;
+        cursor: move;
       }
     `,
     blockPointerEvents: `
@@ -122,8 +122,8 @@ export default (styleContext: string): Styles => {
   const bodyStyles = {
     whileActiveDragging: `
       body {
-        cursor: grabbing;
-        cursor: -webkit-grabbing;
+        cursor: move;
+        cursor: -webkit-move;
         user-select: none;
         -webkit-user-select: none;
         -moz-user-select: none;

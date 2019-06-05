@@ -10,7 +10,7 @@ export default (function (styleContext) {
 
   var dragHandleStyles = {
     base: '\n      ' + dragHandleSelector + ' {\n        -webkit-touch-callout: none;\n        -webkit-tap-highlight-color: rgba(0,0,0,0);\n        touch-action: manipulation;\n      }\n    ',
-    grabCursor: '\n      ' + dragHandleSelector + ' {\n        cursor: -webkit-grab;\n        cursor: grab;\n      }\n    ',
+    grabCursor: '\n      ' + dragHandleSelector + ' {\n        cursor: -webkit-move;\n        cursor: move;\n      }\n    ',
     blockPointerEvents: '\n      ' + dragHandleSelector + ' {\n        pointer-events: none;\n      }\n    '
   };
 
@@ -23,7 +23,7 @@ export default (function (styleContext) {
   };
 
   var bodyStyles = {
-    whileActiveDragging: '\n      body {\n        cursor: grabbing;\n        cursor: -webkit-grabbing;\n        user-select: none;\n        -webkit-user-select: none;\n        -moz-user-select: none;\n        -ms-user-select: none;\n      }\n    '
+    whileActiveDragging: '\n      body {\n        cursor: move;\n        cursor: -webkit-move;\n        user-select: none;\n        -webkit-user-select: none;\n        -moz-user-select: none;\n        -ms-user-select: none;\n      }\n    '
   };
 
   var base = [dragHandleStyles.base, droppableStyles.base];
